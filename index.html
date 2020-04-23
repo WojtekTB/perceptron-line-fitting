@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perceptron line fitting</title>
     <style>
-        input{
+        input {
             width: 20vw;
         }
     </style>
@@ -13,10 +14,12 @@
     <script src="./sketch.js"></script>
     <script src="./perceptron.js"></script>
 </head>
+
 <body>
     <h1>Perceptron guesses a line</h1>
     <div id="mainCanvas" style="float: left; width: 49vw;"></div>
     <div style="float: right; width: 49vw;">
+        <label style="margin-bottom: 2px;">Training controlls:</label>
         <div>
             <button onclick="showWeights()">Show weights</button>
             <button onclick="trainModel()">train</button>
@@ -42,8 +45,15 @@
         </div>
         <div>
             <h4>Sidenote:</h4>
-            <p>You can click on the canvas to add more points</p>
+            <p>You can click on the canvas to add more points.</p>
+            <p>The inner color is what perceptron classifies the point as, and the outter color is what the dot
+                classification actually is.</p>
         </div>
+        <!-- <div>
+            <h4>Perceptron:</h4>
+            <img src="" style="height: 30vh;" id="perceptronImg">
+        </div> -->
     </div>
 </body>
+
 </html>
