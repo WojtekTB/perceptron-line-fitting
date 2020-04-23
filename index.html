@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perceptron line fitting</title>
+    <style>
+        input{
+            width: 20vw;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
+    <script src="./sketch.js"></script>
+    <script src="./perceptron.js"></script>
+</head>
+<body>
+    <h1>Perceptron guesses a line</h1>
+    <div id="mainCanvas" style="float: left; width: 49vw;"></div>
+    <div style="float: right; width: 49vw;">
+        <div>
+            <button onclick="showWeights()">Show weights</button>
+            <button onclick="trainModel()">train</button>
+            <button onclick="autoTrain()">auto train</button>
+        </div>
+        <div>
+            <label style="margin-bottom: 2px;">Real equation:</label>
+            <h3 id="equation" style="margin-top: 2px;">y = mx + b</h3>
+            <label style="margin-bottom: 2px;">Predicted equation:</label>
+            <h3 id="predeque" style="margin-top: 2px;">y = mx + b</h3>
+        </div>
+        <div>
+            <label style="margin-bottom: 2px;">Weights:</label>
+            <h5 id="weights" style="margin-top: 2px;"></h5>
+        </div>
+        <div>
+            <input type="range" id="slope" onclick="changedVariables()">
+            <label for="slope">slope</label>
+        </div>
+        <div>
+            <input type="range" id="yInt" onclick="changedVariables()">
+            <label for="yInt">y-intercept</label>
+        </div>
+        <div>
+            <h4>Sidenote:</h4>
+            <p>You can click on the canvas to add more points</p>
+        </div>
+    </div>
+</body>
+</html>
