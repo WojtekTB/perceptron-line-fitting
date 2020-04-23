@@ -1,6 +1,6 @@
 var m, b;
 
-var canvasW = innerWidth/2 - 30, canvasH = innerWidth/2 - 30;
+var canvasW = innerWidth/2 - 30, canvasH = innerHeight*0.9;
 
 var points = [], identifiedPoints = [], numberOfPoints = 50;
 
